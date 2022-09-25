@@ -10,12 +10,33 @@ html {
 }
 
 body {
-    font-family: "Nunito", sans-serif;
+    font-family:  sans-serif;
     font-weight: 400;
-    height: 100vh;
+    /* height: 200vh; */
     color: aquamarine;
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+//avatars
+
+.avatar {
+    height: 50%
+    width: auto;
+  /* left: 50%;
+  /* top: 16.5rem; */
+  /* transform: translateX(-50%); */
+  /* height: 10rem; */
+  /* box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2); */ */
+}
+
+.score {
+    font-size: large;
+
+}
+
+.name {
+    font-size: large;
 }
