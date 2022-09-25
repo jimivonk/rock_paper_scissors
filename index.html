@@ -9,32 +9,39 @@
 </head>
 <body>
     <main>
-    
-        <section class="player player--0">
-            <img src="./images/avatar_fem.png" class="avatar avatar--0" 
-            alt="Female player avatar">
-            <h2 class="player player--0">Player 1</h2>
-            <p class="score score--0">0</p>
+        <container class="player--position">    
+            <section class="player player--0">
+                <img src="./images/avatar_fem.png"  
+                alt="Female player avatar" class="avatar avatar--0">
+                <h2 class="name">Player 1</h2>
+                <p class="score score--0">0</p>
 
-        </section>
+            </section>
 
-        <section class="player player--1">
-            <img src="./images/avatar_skelator.png" class="avatar avatar--1" 
-            alt=""Skelator avatar>
-            <h2 class="player player--1">Player 2</h2>
-            <p class="score score--1">0</p>
-        </section>
+            <section class="player player--1">
+                <img src="./images/avatar_skelator.png"  
+                alt="Skelator avatar" class="avatar avatar--1">
+                <h2 class="name">Player 2</h2>
+                <p class="score score--1">0</p>
+            </section>
+    </container>
+    <container class="moveDisplay">
+        <img src="./images/neon_paper.jpeg" alt="neon paper symbol" class="moveDisplay moveDisplay--0">
+        <img src="./images/neon_paper.jpeg" alt="neon paper symbol" class="moveDisplay moveDisplay--1"> 
+    </container>
 
-        <container class="popUp hidden">
-        
-        <img src="./images/neon_paper.jpeg" alt="neon paper symbol">
+    <container class="playGame">
         <button class="btn btn--rock">Rock</button>
         <button class="btn btn--paper">Paper</button>
         <button class="btn btn--scissors">Scissors</button>
-        <button class="btn btn--continue">Continue</button>
-        <button class="btn btn--newGame">New Game</button>
-
-
+              
+    </container>
+    
+    <button class="btn btn--newGame">New Game</button>
+        
+        <container class="popUp hidden">
+            <button class="btn btn--continue">Continue</button>
+        
         </container>
     </main>
     <script src="script.js"></script>
