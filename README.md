@@ -69,9 +69,15 @@ music
 opponents speech box
 
 #buttons
+invert box when hovering, fill box and change to black text when clicked
+btn btn--game
+btn colors to match image
+
 1)rock
 2)paper
 3)scissors
+
+btn--init
 4)play again
 5)continue
 
@@ -90,6 +96,26 @@ create .hidden elements to be called in and out depending how the game stataus
 
 **************************************************************************
 <Javascript>
+#Game Map
+-STAGE 1
+initial game screen "player 1"(--0)) left, opponent right
+-scores start at 0
+- move hands hidden
+- text says make your play
+
+while count1 || count2 < 10 (can later make this an option)
+
+-player clicks box to select move
+-computer move save to variable
+-moves update move image displayed
+-moves passed into game function
+-game function returns result function
+
+if result === "player 1 wins"
+use logic to trigger player 
+
+
+
 #pre-match pop-up
 CONTAINER with .hidden
 name
@@ -149,6 +175,8 @@ winGameResonse: str    //next stage => [str, str, str]
 loseGameResonse:str    //next stage => [str, str, str]
 playStyle: [] || {} //create
 
+badGuy select function 
+IF can't find way to randomly select through index, use map (and poss additional for loop) to select via ID
 #create game through functions: 
 1)Build one character, with one thing to say for each event.
 2) build game as a series of functions that works entirely through database

@@ -36,7 +36,6 @@ body {
   display: flex;
   flex-direction: column;
   transition: all 0.75s;
-  ;
 }
 
 .player--0 {
@@ -44,6 +43,7 @@ body {
     background-color: #222;
     padding-right: 12rem;
     padding-left: 3rem;
+    
 }
 
 .player--1 {
@@ -52,6 +52,12 @@ body {
     background-color: black;
     padding-left: 12rem;
     padding-right: 3rem;
+}
+
+.player0Win {
+    border-style: solid;
+    border-width: medium;
+    border-color: silver;
 }
 
 /* avatars */
@@ -87,12 +93,12 @@ body {
 }
 
 .moveDisplay--0  {
-    box-shadow: 0 1rem 3rem #E9EFF8; 
+    box-shadow: 0 1rem 3rem #7295c9;
     border-radius: 50%;
 }
 
 .moveDisplay--1 {
-    box-shadow: 0 1rem 3rem #E9EFF8; 
+    box-shadow: 0 1rem 3rem #7295c9; 
     border-radius: 50%;
 }
 

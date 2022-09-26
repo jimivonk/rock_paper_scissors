@@ -10,10 +10,10 @@ const btnScissors = document.querySelector('.btn--scissors');
 const btnNew = document.querySelector('.btn--new');
 const cont = document.querySelector('.btn--cont')
 
-console.log(player0El.textContent);
-console.log(player1El.textContent);
-console.log(score0El + 2);
-console.log(score1El+ 2);
+// console.log(player0El.textContent);
+// console.log(player1El.textContent);
+// console.log(score0El + 2);
+// console.log(score1El+ 2);
 
 const badGuys =  [
     {ref: 1,
@@ -66,11 +66,19 @@ console.log(opponent);
 const player = "player"
 
 
-const game = function (move1, move2) {
-    if (move1 === move2) {
-        return "draw"
-    } else
-}
+// const game = function (move1, move2) {
+//     if (move1 === move2) {
+//         return "draw"
+//     } else
+// }
 // will need to seperate out as random selector will need to do more than just pass into this function
 // name functions to pass into this in while loop
-let result = game(Eventlistner(click,(), randomSelector())
+// let result = game(Eventlistner(click,(), randomSelector())
+
+// const winBorder = function(plr) {
+//     plr.classList.add("playerWin")
+// };
+
+// winBorder(player0El);
+
+player0El.classList.add(".playerWin")
