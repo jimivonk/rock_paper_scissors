@@ -59,26 +59,44 @@ const randomSelector = function(num1=3, num2=1){
 console.log(randomSelector(6));
 console.log(randomSelector());
 
-const opponent = badGuys[(randomSelector((badGuys.length -1), 0))].charName;
-console.log(randomSelector((badGuys.length), 0));
+const opponent = badGuys[(randomSelector((badGuys.length -1), -1))].charName;
+console.log(randomSelector((badGuys.length), -1));
 console.log(opponent);
 
 const player = "player"
 
+// game function pass in a move from each player returns string to trigger
+// next part of engine
+const game = function (move1, move2) {
+    if (move1 === move2) {
+        return "draw"
+    } else if ((move1 === "rock" && move2 === "scissors")
+    || (move1 ==="paper" && move2 === "rock")
+    || (move1 === "scissors" && move2 ==="paper")) {
+        return "winPlayer1"
+    } else {
+        return "winPlayer2"
+    }
+}
 
-// const game = function (move1, move2) {
-//     if (move1 === move2) {
-//         return "draw"
-//     } else
-// }
+console.log(game("rock", "paper"));
+console.log(game("paper", "rock"));
+console.log(game("paper", "paper"));
+console.log(game("scissors", "paper"));
+
+
+
+
 // will need to seperate out as random selector will need to do more than just pass into this function
 // name functions to pass into this in while loop
 // let result = game(Eventlistner(click,(), randomSelector())
 
-// const winBorder = function(plr) {
-//     plr.classList.add("playerWin")
-// };
+
+//function to place silver border round winner
+const winBorder = function(plr) {
+    plr.classList.add("player0Win")
+};
 
 // winBorder(player0El);
 
-player0El.classList.add(".playerWin")
+// player0El.classList.add("player0Win");
