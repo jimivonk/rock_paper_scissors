@@ -24,13 +24,15 @@ body {
 
 .player--position {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    background-color: grey;
 
 }
 
 .player {
   flex: 50%;
-  padding: 12rem;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
   display: flex;
   flex-direction: column;
   transition: all 0.75s;
@@ -39,10 +41,17 @@ body {
 
 .player--0 {
     align-items: left;
+    background-color: #222;
+    padding-right: 12rem;
+    padding-left: 3rem;
 }
 
 .player--1 {
+    text-align: right;
     align-items: right;
+    background-color: black;
+    padding-left: 12rem;
+    padding-right: 3rem;
 }
 
 /* avatars */
@@ -66,12 +75,13 @@ body {
 
 /* move display hands */
 .moveDisplay {
+    background-color: #111;
     height: 75px;
     width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 270px;
+    gap: 300px;
     
 
 }
@@ -96,18 +106,24 @@ body {
     padding-top: 10px;
     font-size: 40px;
 }
+
 .playGame {
+    padding-top: 40px;
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* gap: 20px; */
     /* justify-content: space-between; */
 }
 
 .btn {
     /* position: absolute; */
   /* left: 50%; */
-  transform: translateX(-50%);
-  color: #444;
+  /* transform: translateX(-50%); */
+  color: #fff;
   background: none;
-  border: none;
+  border: line;
+  border-color: aqua;
   font-family: inherit;
   font-size: 1.8rem;
   text-transform: uppercase;
@@ -115,11 +131,15 @@ body {
   font-weight: 400;
   transition: all 0.2s;
 
-  background-color: white;
-  background-color: rgba(255, 255, 255, 0.6);
+  /* background-color: #00F2FF;
+  background-color: #00F2FF; */
   backdrop-filter: blur(10px);
 
   padding: 0.7rem 2.5rem;
-  border-radius: 50rem;
-  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 20rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 2);
+}
+
+.hidden {
+    display: none;
 }

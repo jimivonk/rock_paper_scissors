@@ -35,7 +35,7 @@ const badGuys =  [
     },
 
     {ref: 3,
-    charName: "Jackman",
+    charName: "Joker",
     playStyle: [],
     winRound: "Victory is getting closer, I can smell it",
     looseRound: "Your luck is running out loser!",
@@ -44,7 +44,7 @@ const badGuys =  [
     },
 
     {ref: 4,
-    charName: "Space Guy",
+    charName: "Sauron",
     playStyle: [],
     winRound: "Victory is getting closer, I can smell it",
     looseRound: "Your luck is running out loser!",
@@ -63,3 +63,14 @@ const opponent = badGuys[(randomSelector((badGuys.length -1), 0))].charName;
 console.log(randomSelector((badGuys.length), 0));
 console.log(opponent);
 
+const player = "player"
+
+
+const game = function (move1, move2) {
+    if (move1 === move2) {
+        return "draw"
+    } else
+}
+// will need to seperate out as random selector will need to do more than just pass into this function
+// name functions to pass into this in while loop
+let result = game(Eventlistner(click,(), randomSelector())
