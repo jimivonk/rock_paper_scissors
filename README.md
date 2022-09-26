@@ -103,6 +103,8 @@ initial game screen "player 1"(--0)) left, opponent right
 - move hands hidden
 - text says make your play
 
+*****
+
 while count1 || count2 < 10 (can later make this an option)
 
 -player clicks box to select move
@@ -111,8 +113,28 @@ while count1 || count2 < 10 (can later make this an option)
 -moves passed into game function
 -game function returns result function
 
+*****
+// CAN make this automatic: ONE function that says: 
+
+if (result === "player1Win") {
+    trigger changes A
+} else if (result === "player2Win") {
+    trigger changes B
+} else{
+    trigger changes c
+};
+ 
+
 if result === "player 1 wins"
-use logic to trigger player 
+use logic to trigger player 1 win func
+    updates: adds 1 to score,
+     
+    update score on games screen
+    border round container,
+     
+    opponent lose statement function 
+or to trigger player 2 win function:
+    updates
 
 
 
