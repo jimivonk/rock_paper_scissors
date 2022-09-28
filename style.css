@@ -109,9 +109,17 @@ body {
 }
 
 .name {
-    padding-top: 10px;
+    padding-top: 20px;
     font-size: 40px;
 }
+
+/* .name--0 {
+    color:#7295c9;
+}
+
+.name--1 {
+    color: red;
+} */
 
 .playGame {
     padding-top: 40px;
@@ -121,15 +129,15 @@ body {
     /* gap: 20px; */
     /* justify-content: space-between; */
 }
-
+//buttons
 .btn {
     /* position: absolute; */
   /* left: 50%; */
   /* transform: translateX(-50%); */
-  color: #fff;
+  /* color: #fff;
   background: none;
   border: line;
-  border-color: aqua;
+  border-color: rgb(43, 255, 0); */
   font-family: inherit;
   font-size: 1.8rem;
   text-transform: uppercase;
@@ -146,6 +154,60 @@ body {
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 2);
 }
 
+.btn--rock {
+    color: #fff;
+    background: none;
+    border: line;
+    border-color: rgb(255, 0, 174);
+    font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+
+  /* background-color: #00F2FF;
+  background-color: #00F2FF; */
+  backdrop-filter: blur(10px);
+
+  padding: 0.7rem 2.5rem;
+  border-radius: 20rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 2);
+}
+
+.btn--paper {
+    color: #fff;
+    background: none;
+    border: line;
+    border-color: aqua;
+    font-family: inherit;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 400;
+    transition: all 0.2s;
+    padding: 0.7rem 2.5rem;
+    border-radius: 20rem;
+    box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 2);
+}
+
+.btn--scissors {
+    color: #fff;
+    background: none;
+    border: line;
+    border-color: rgb(229, 255, 0);
+    font-family: inherit;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 400;
+    transition: all 0.2s;
+    padding: 0.7rem 2.5rem;
+    border-radius: 20rem;
+    box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 2);
+}
+
+/* HIDDEN */
 .hidden {
     display: none;
 }
