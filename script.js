@@ -75,9 +75,9 @@ const game = function (move0, move1) {
     } else if ((move0 === "rock" && move1 === "scissors")
     || (move0 ==="paper" && move1 === "rock")
     || (move0 === "scissors" && move1 ==="paper")) {
-        return "win0"
+        return "0"
     } else {
-        return "win1"
+        return "1"
     }
 };
 // //FUNCTION to return players move on clicking of game butto
@@ -117,8 +117,8 @@ const numberToMoveConvertor = function(int) {
 
 
 //function to place silver border round winner
-const winBorder = function(plr) {
-    plr.classList.add("player0Win")
+const winBorder = function(plr, winner) {
+    plr.classList.add(`player${winner}Win`)
 };
 // winBorder(player0El);
 // player0El.classList.add("player0Win");
@@ -145,8 +145,8 @@ const init = function() {
 //       }
 // jpeg changer
 const gameIcon = function(move0, move1) {
-    moveEl0.classList.add("hidden");
-    moveEl1.classList.add("hidden");
+    moveEl0.classList.remove("hidden");
+    moveEl1.classList.remove("hidden");
     moveEl0.src = `./images/neon_${move0}.jpeg`
     moveEl1.src = `./images/neon_${move1}.jpeg`
 }
@@ -161,28 +161,22 @@ const opponent = badGuys[(randomSelector((badGuys.length), -1))];
 const opponentName= opponent.charName
 console.log(opponent.winRound, opponentName)
 let gameStatus = false
+let gameArray = []
 let opponentMove, result, playerMove1
 
 init()
 
 
 //GAME LOOP
-// while (score0 < 1 && score1 < 1) {  
-//     // playerMove = numberToMoveConvertor(randomSelector())
-//     // playerMove = "rock"
-//     const playerMove1 = playerMove()
-//     console.log(playerMove1)
-//     opponentMove = numberToMoveConvertor(randomSelector());
-//     gameIcon(playerMove1, opponentMove);
-//     console.log(playerMove1, opponentMove);
-//     result = game(playerMove1, opponentMove);
-//     console.log(result);
-//     if (result === "win0"){
-//         score0 += 1} else if (result === "win1") {
-//         score1 += 1
-//     };
-//     console.log(score0, score1);
-// }
+// while (score0 < 10 && score1 < 10) {  
+
+const screenRoundUpdate = function (res) {
+     const winnerScore = document.querySelector(`score--${res}`)
+    
+     winnerScore.textContent = gameArray[res]
+    //  winBorder(`player${res}El`, res);
+}
+
 
 const gameLoop = function (playerMove) {
     
@@ -192,16 +186,29 @@ const gameLoop = function (playerMove) {
     console.log(playerMove, opponentMove);
     result = game(playerMove, opponentMove);
     console.log(result);
-    if (result === "win0"){
-        score0 += 1} else if (result === "win1") {
+    if (result === "0"){
+        score0 += 1} else if (result === "1") {
         score1 += 1
     };
     console.log(score0, score1);
-}
+    gameArray = []
+    gameArray.push(score0, score1, result)
+    console.log(score0, score1)
+    console.log(gameArray)
+};
 
-btnRock.addEventListener("click", function() {
-    gameLoop("rock")});
-    // if (btnPaper.addEventListener("click", function(){
-    //     playerMove = "paper"}));
-    // if (btnScissors.addEventListener("click", function(){
-    //     playerMove = "scissors"}));
+console.log(score0, score1);
+console.log(gameArray);
+// 
+
+
+if (gameStatus) {
+    btnRock.addEventListener("click", function() {
+        gameLoop("rock")});
+        btnPaper.addEventListener("click", function() {
+            gameLoop("paper")
+        });
+        btnScissors.addEventListener("click", function() {
+            gameLoop("scissors")
+        });
+    };
