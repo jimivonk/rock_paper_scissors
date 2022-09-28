@@ -13,7 +13,7 @@ body {
     font-family:  sans-serif;
     font-weight: 400;
     /* height: 200vh; */
-    color: aquamarine;
+    
     background-color: black;
     display: flex;
     align-items: center;
@@ -40,24 +40,65 @@ body {
 
 .player--0 {
     align-items: left;
-    background-color: #222;
+    background-color: black;
     padding-right: 12rem;
     padding-left: 3rem;
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #11F583,
+      0 0 42px #11F583,
+      0 0 82px #11F583,
+      0 0 92px #11F583,
+      0 0 102px #11F583,
+      0 0 151px #11F583;
     
 }
 
 .player--1 {
     text-align: right;
     align-items: right;
-    background-color: black;
+    background-color:  #222;
     padding-left: 12rem;
     padding-right: 3rem;
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #FF3E41,
+      0 0 82px #FF3E41,
+      0 0 92px #FF3E41,
+      0 0 102px #FF3E41,
+      0 0 151px #FF3E41;
 }
 
+.chatBox {
+    padding-top: 45px;
+    color: lightgrey;
+    font-size: 20px;
+    /* text-align: left; */
+    /* align-self: flex-start; */
+    width: 200px;
+    height: 150px;
+}
 .player0Win {
     border-style: solid;
     border-width: medium;
-    border-color: silver;
+    border-color: rgb(29, 255, 12);
+}
+
+.player1Win {
+    border-style: solid;
+    border-width: medium;
+    border-color: rgb(196, 0, 26);
+}
+
+.gameWin {
+    border-style: solid;
+    border-width: medium;
+    border-color: gold;
 }
 
 /* avatars */
@@ -72,10 +113,13 @@ body {
 }
 
 .avatar--0 {
+    box-shadow: 0 1rem 3rem #11F583;
 
 }
 
 .avatar--1 {
+    box-shadow: 0 1rem 3rem #FF3E41;
+    align-self: flex-end;
 
 }
 
@@ -129,15 +173,21 @@ body {
     /* gap: 20px; */
     /* justify-content: space-between; */
 }
-//buttons
+.gamesScreen {
+
+}
+
+
+
+/* buttons */
 .btn {
     /* position: absolute; */
   /* left: 50%; */
   /* transform: translateX(-50%); */
-  /* color: #fff;
+  color: #fff;
   background: none;
   border: line;
-  border-color: rgb(43, 255, 0); */
+  border-color: rgb(43, 255, 0); 
   font-family: inherit;
   font-size: 1.8rem;
   text-transform: uppercase;
@@ -154,25 +204,42 @@ body {
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 2);
 }
 
+.btn--newGame{
+    /* float: top; */
+}
+
+.btn--newGame:hover {
+    color: rgb(43, 255, 0);
+    background: none;
+    border: line;
+    border-color: #fff;
+}
+
+.btn--newGame:active {
+    color: black;
+    background: rgb(43, 255, 0);
+    border: line;
+    border-color: rgb(43, 255, 0);
+}
+
 .btn--rock {
     color: #fff;
     background: none;
     border: line;
     border-color: rgb(255, 0, 174);
-    font-family: inherit;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  cursor: pointer;
-  font-weight: 400;
-  transition: all 0.2s;
+}
+.btn--rock:hover {
+    color: rgb(255, 0, 174);
+    background: none;
+    border: line;
+    border-color: #fff;
+}
 
-  /* background-color: #00F2FF;
-  background-color: #00F2FF; */
-  backdrop-filter: blur(10px);
-
-  padding: 0.7rem 2.5rem;
-  border-radius: 20rem;
-  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 2);
+.btn--rock:active {
+    color: black;
+    background: rgb(255, 0, 174);
+    border: line;
+    border-color: rgb(255, 0, 174);
 }
 
 .btn--paper {
@@ -180,31 +247,42 @@ body {
     background: none;
     border: line;
     border-color: aqua;
-    font-family: inherit;
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-weight: 400;
-    transition: all 0.2s;
-    padding: 0.7rem 2.5rem;
-    border-radius: 20rem;
-    box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 2);
 }
+
+.btn--paper:hover {
+    color: aqua;
+    background: none;
+    border: line;
+    border-color: white;
+}
+
+.btn--paper:active {
+    color:black;
+    background: aqua;
+    border: line;
+    border-color: aqua;
+}
+
 
 .btn--scissors {
     color: #fff;
     background: none;
     border: line;
     border-color: rgb(229, 255, 0);
-    font-family: inherit;
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-weight: 400;
-    transition: all 0.2s;
-    padding: 0.7rem 2.5rem;
-    border-radius: 20rem;
-    box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 2);
+}
+
+.btn--scissors:hover {
+    color: rgb(229, 255, 0);
+    background: none;
+    border: line;
+    border-color: #fff;
+}
+
+.btn--scissors:active {
+    color: #fff;
+    background: rgb(229, 255, 0);
+    border: line;
+    border-color: rgb(229, 255, 0);
 }
 
 /* HIDDEN */
